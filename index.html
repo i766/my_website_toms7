@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Точный макет</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header"><span>I</span><span>n</span><span>t</span><span>e</span><span>r</span>
+            <span>a</span><span>c</span><span>t</span><span>i</span><span>v</span><span>e</span></header>
+        <nav class="nav">
+            <p>1.1 Nav բլոկի տեղադրվի վերև, խնդիր 1, խնդիր 2 կետերում:</p>
+            <button onclick="runTask1()">Խնդիր 1</button>
+            <button onclick="runTask2()">Խնդիր 2</button>
+            <p>1.2 Aside բլոկի տեղադրվի ներքև. Եթե պատուհանի լայնք &lt;=600 px լինի, այն պետք է չերևա:</p>
+            <p>1.3 Header և Footer բլոկները ընդգրկում են ամբողջ լայնությունը:</p>
+            <p>2.Մենյուի խնդիր 1 և խնդիր 2 –ի վրա սեղմելով գործարկել համապատաս- խանաբար 2.1 և 2.2 խնդիրները։ Արդյունքները արտածել Article բլոկում։</p>
+            <p> 2.1 Կազմե՛ք ֆունկցիա, որը կլցնի զանգվածը տրված միջակայքից N պատահական թվերով։</p>
+            <p> 2.2 Տրված է որոշակի զանգված. օրինակ՝[123, 456, 789]: Միավորե՛ք այս զանգվածի բոլոր տարրերը մեկ զանգվածի մեջ՝ դրանք բաժանելով նիշ առ նիշ։</p>
+        </nav>
+        <article class="article" id="output">
+            <h2>Article</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Table Header</th>
+                        <th>Table Header</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                    </tr>
+                    <tr>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                    </tr>
+                    <tr>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                    </tr>
+                    <tr>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                    </tr>
+                    <tr>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="responsive-image"></div>
+        </article>
+        <aside class="aside"></aside>
+        <footer class="footer">
+            <span>© 2024  Irina Harutunyan</span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

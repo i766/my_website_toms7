@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+.container {
+    display: grid;
+    grid-template-areas: 
+        "nav header header"
+        "nav article aside"
+        "footer footer footer";
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    width: 100%;
+    max-width: 900px;
+    min-height: 100vh;
+    height: 700px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    grid-area: header;
+    background-color: #88b04b;
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 20px;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: #d8f8d4;
+    width: 180px;
+    text-align: center;
+}
+.nav p{
+    position: relative;
+    font-family: Arial, sans-serif;
+    color: rgb(31, 31, 59);
+    font-size: 15px;
+    z-index: 5;
+    margin: 15px 0 15px 0;
+}
+button{
+    background-color: rgb(46, 96, 178);
+    padding: 7px;
+    color: white;
+    /* cursor: pointer; */
+}
+button:hover{
+    background-color: red;
+}
+
+.article {
+    grid-area: article;
+    background-color: #e6efdf;
+    padding: 20px;
+}
+
+.article h2 {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #ddd;
+    font-weight: bold;
+}
+
+tr:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+.aside {
+    grid-area: aside;
+    /* background-color: #f8f1d6; */
+    text-align: center;
+    /* padding: 10px; */
+    width: 180px;
+    background-image: url(OIP.jpg);
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #88b04b;
+    text-align: center;
+    padding: 20px;
+}
+@media (max-width: 600px) {
+    .aside {
+        background-image: url(imag3-1024x1024.jpg); 
+    }
+}
+
+.header {
+    background: linear-gradient(135deg, #ff6f61, #ffcc33); 
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 2.8rem;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 30px 10px;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: gradientShift 5s infinite alternate; 
+}
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+/* aliq */
+.header::before {
+    content: '';
+    position: absolute;
+    top: 80%;
+    left: -50%;
+    width: 200%;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: waveMove 6s infinite linear;
+    z-index: -1;
+}
+
+/* aliqi animaciya */
+@keyframes waveMove {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* tareri odum efekty */
+.header span {
+    display: inline-block;
+    position: relative;
+    animation: floatText 3s ease-in-out infinite;
+}
+
+.header span:nth-child(odd) {
+    animation-delay: 0.5s;
+}
+
+.header span:nth-child(even) {
+    animation-delay: 1s;
+}
+
+@keyframes floatText {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+.footer {
+    background: #0f2027; 
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 17px 10px;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0) 0%, rgba(0, 255, 255, 0.7) 50%, rgba(0, 255, 255, 0) 100%);
+    animation: neonLine 3s infinite;
+}
+
+@keyframes neonLine {
+    0% {
+        left: -50%;
+    }
+    100% {
+        left: 150%;
+    }
+}
+
+.footer:hover {
+    color: #00ffff; 
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+    transition: color 0.5s, text-shadow 0.5s;
+}
+
+.footer::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+    border-radius: 50%;
+    top: -50px;
+    right: -50px;
+    animation: glowPulse 4s infinite alternate;
+}
+
+@keyframes glowPulse {
+    from {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    to {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
